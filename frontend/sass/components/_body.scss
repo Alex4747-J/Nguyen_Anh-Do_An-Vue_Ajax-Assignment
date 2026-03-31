@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+
+h2 {
+  font-size: 42px;
+  margin-left: 3.5rem;
+}
+
+.card {
+  position: relative;
+  background-color: black;
+  width: 220px;
+  height: 300px;
+  padding: 3px;
+  border-radius: 10px;
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+
+.card::after,
+.card::before {
+  position: absolute;
+  width: 104%;
+  height: 102%;
+  content: "";
+  background-image: linear-gradient( $purple, $danger);
+  border-radius: 6px;
+  z-index: -1;
+  left: -2%;
+  top: -1%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.card::after {
+  filter: blur(20px);
+}
+
+.card:hover::after,
+.card:hover::before {
+  opacity: 1;
+  animation: spin 1.5s linear infinite;
+}
+

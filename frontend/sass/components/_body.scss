@@ -14,6 +14,7 @@ h2 {
   border-radius: 10px;
   margin-left: 2rem;
   margin-top: 3rem;
+    overflow: visible; 
 }
 
 .card::after,
@@ -22,7 +23,7 @@ h2 {
   width: 104%;
   height: 102%;
   content: "";
-  background-image: linear-gradient( $purple, $danger);
+  background-image: linear-gradient($purple, $danger);
   border-radius: 6px;
   z-index: -1;
   left: -2%;
@@ -41,3 +42,52 @@ h2 {
   animation: spin 1.5s linear infinite;
 }
 
+.card img:nth-child(1) {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  width: 96%;
+  height: 96%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 6px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card:hover img:nth-child(1) {
+  opacity: 0;
+}
+
+.card img:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);   
+  width: auto;              
+  height: 380px;           
+  max-width: unset;         
+  opacity: 0;
+  object-position: bottom;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card:hover img:nth-child(2) {
+  opacity: 1;
+}
+
+.content {
+    position: absolute;
+    top: 80%;
+    left:10px;
+    font-family: $secondary-font;
+    font-size: 33px;
+    color: $third-color;
+    rotate: -10deg;
+    text-shadow: 0 0 10px $bg-color;
+}
+
+.card:hover .content {
+    color: $secondary-color;
+    text-shadow: 0 0 10px $primary-color;
+}

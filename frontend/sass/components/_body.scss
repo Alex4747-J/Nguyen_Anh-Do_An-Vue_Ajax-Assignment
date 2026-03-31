@@ -1,15 +1,28 @@
 @use "../abstracts" as *;
 
 h2 {
-  font-size: 42px;
-  margin-left: 3.5rem;
+  font-size: 52px;
+  margin-left: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 h3 {
   font-size: 36px;
   color: $third-color;
   margin-top: 2rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.card-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-left: 1rem;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  justify-content: center;
 }
 
 .card {
@@ -19,9 +32,8 @@ h3 {
   height: 260px;
   padding: 3px;
   border-radius: 10px;
-  margin-left: 2rem;
-  margin-top: 3rem;
   overflow: visible;
+  margin-top: 1rem;
 }
 
 .card::after,
@@ -72,7 +84,7 @@ h3 {
   left: 50%;
   transform: translateX(-50%);
   width: auto;
-  height: 380px;
+  height: 360px;
   max-width: unset;
   opacity: 0;
   object-position: bottom;
@@ -101,4 +113,32 @@ h3 {
 
 .card1:hover {
   background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 100px;
+    margin-left: 20rem;
+  }
+
+  h3 {
+    font-size: 62px;
+    margin-left: 38rem;
+  }
+  .card-group {
+    gap: 8rem;
+    margin-top: 6rem;
+  }
+  .card {
+    width: 380px;
+    height: 460px;
+  }
+
+  .card img:nth-child(2) {
+    height: 620px;
+  }
+
+  .content {
+    font-size: 72px;
+  }
 }

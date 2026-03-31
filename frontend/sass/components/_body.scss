@@ -5,6 +5,13 @@ h2 {
   margin-left: 3.5rem;
 }
 
+h3 {
+    font-size: 36px;
+    color: $third-color;
+    margin-top: 2rem;
+    margin-bottom: 4.5rem;
+}
+
 .card {
   position: relative;
   background-color: black;
@@ -41,3 +48,59 @@ h2 {
   animation: spin 1.5s linear infinite;
 }
 
+<<<<<<< Updated upstream
+=======
+.card img:nth-child(1) {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  width: 96%;
+  height: 96%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 6px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card:hover img:nth-child(1) {
+  opacity: 0;
+}
+
+.card img:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);   
+  width: auto;              
+  height: 380px;           
+  max-width: unset;         
+  opacity: 0;
+  object-position: bottom;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card:hover img:nth-child(2) {
+  opacity: 1;
+}
+
+.content {
+    position: absolute;
+    top: 80%;
+    left:10px;
+    font-family: $secondary-font;
+    font-size: 33px;
+    color: $third-color;
+    rotate: -10deg;
+    text-shadow: 0 0 10px $bg-color;
+}
+
+.card:hover .content {
+    color: $bg-color;
+    text-shadow: 0 0 10px $primary-color;
+}
+
+.card1:hover {
+    background-color: transparent;
+}
+>>>>>>> Stashed changes

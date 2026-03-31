@@ -21,6 +21,7 @@ h3 {
   border-radius: 10px;
   margin-left: 2rem;
   margin-top: 3rem;
+    overflow: visible; 
 }
 
 .card::after,
@@ -29,7 +30,7 @@ h3 {
   width: 104%;
   height: 102%;
   content: "";
-  background-image: linear-gradient( $purple, $danger);
+  background-image: linear-gradient($purple, $danger);
   border-radius: 6px;
   z-index: -1;
   left: -2%;
@@ -48,8 +49,6 @@ h3 {
   animation: spin 1.5s linear infinite;
 }
 
-<<<<<<< Updated upstream
-=======
 .card img:nth-child(1) {
   position: absolute;
   bottom: 2%;
@@ -96,11 +95,7 @@ h3 {
 }
 
 .card:hover .content {
-    color: $bg-color;
+    color: $secondary-color;
     text-shadow: 0 0 10px $primary-color;
 }
 
-.card1:hover {
-    background-color: transparent;
-}
->>>>>>> Stashed changes

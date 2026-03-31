@@ -6,22 +6,22 @@ h2 {
 }
 
 h3 {
-    font-size: 36px;
-    color: $third-color;
-    margin-top: 2rem;
-    margin-bottom: 4.5rem;
+  font-size: 36px;
+  color: $third-color;
+  margin-top: 2rem;
+  margin-bottom: 4.5rem;
 }
 
 .card {
   position: relative;
   background-color: black;
-  width: 220px;
-  height: 300px;
+  width: 180px;
+  height: 260px;
   padding: 3px;
   border-radius: 10px;
   margin-left: 2rem;
   margin-top: 3rem;
-    overflow: visible; 
+  overflow: visible;
 }
 
 .card::after,
@@ -70,10 +70,10 @@ h3 {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);   
-  width: auto;              
-  height: 380px;           
-  max-width: unset;         
+  transform: translateX(-50%);
+  width: auto;
+  height: 380px;
+  max-width: unset;
   opacity: 0;
   object-position: bottom;
   transition: opacity 0.5s ease-in-out;
@@ -84,18 +84,21 @@ h3 {
 }
 
 .content {
-    position: absolute;
-    top: 80%;
-    left:10px;
-    font-family: $secondary-font;
-    font-size: 33px;
-    color: $third-color;
-    rotate: -10deg;
-    text-shadow: 0 0 10px $bg-color;
+  position: absolute;
+  top: 80%;
+  left: 10px;
+  font-family: $secondary-font;
+  font-size: 33px;
+  color: $third-color;
+  rotate: -10deg;
+  text-shadow: 0 0 10px $bg-color;
 }
 
 .card:hover .content {
-    color: $secondary-color;
-    text-shadow: 0 0 10px $primary-color;
+  color: $bg-color;
+  text-shadow: 0 0 10px $primary-color;
 }
 
+.card1:hover {
+  background-color: transparent;
+}

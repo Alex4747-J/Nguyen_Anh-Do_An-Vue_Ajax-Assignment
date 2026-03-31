@@ -24,8 +24,8 @@ class AgentController extends Controller
 
     public function index(Request $request)
     {
-        $name = $request->get('name', '');
-        $role = $request->get('role', '');
+        $name = $request->input('name', '');
+        $role = $request->input('role', '');
 
         $agentsQuery = Agent::query();
 

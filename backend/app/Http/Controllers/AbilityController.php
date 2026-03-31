@@ -23,8 +23,8 @@ class AbilityController extends Controller
      */
     public function index(Request $request)
     {
-        $type = $request->get('type', ' ');
-        $agentId = $request->get('agent_id', null);
+        $type = $request->input('type', ' ');
+        $agentId = $request->input('agent_id', null);
 
         $abilitiesQuery = Ability::query();
 

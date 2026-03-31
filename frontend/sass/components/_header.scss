@@ -1,0 +1,20 @@
+@use "../abstracts" as *;
+
+.header {
+  background-color: $primary-color;
+  img {
+    height: 180px;
+    width: auto;
+    margin-left: 8rem;
+}
+}
+
+.nav-container {
+    ul{
+          list-style: none;
+        li{
+            text-decoration: none;
+            color: $third-color;
+        }
+    }
+}

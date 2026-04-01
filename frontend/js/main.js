@@ -1,3 +1,3 @@
-import { lightbox } from "./modules/lightbox";
+import { lightbox } from "./modules/lightbox.js";
 
 lightbox();

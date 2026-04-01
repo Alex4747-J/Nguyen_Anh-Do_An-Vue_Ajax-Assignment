@@ -9,18 +9,9 @@ export function lightbox() {
     });
   });
 
-<<<<<<< Updated upstream
-  function fillContent(event) {
-    // event.preventDefault();
-    let agentIndex = this.dataset.agentIndex;
-    let agent = agents[agentIndex];
-    //console.log(this.dataset.heroIndex);
-    content.innerHTML = "";
-=======
   document.getElementById("close").addEventListener("click", function () {
     document.getElementById("lightbox").className = "";
   });
->>>>>>> Stashed changes
 
   document.getElementById("lightbox").addEventListener("click", function (e) {
     if (e.target.id == "lightbox") {

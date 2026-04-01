@@ -2,7 +2,7 @@ export function lightbox() {
   console.log("JS file connected");
 
   const lightBox = document.querySelector("#lightbox");
-  const cards = document.querySelectorAll(".card");
+  const links = document.querySelectorAll("a[href='#lightbox']");
   const content = document.querySelector("#lightbox article");
 
   let agents = [
@@ -84,6 +84,11 @@ export function lightbox() {
     // event.preventDefault();
     location.hash = "lightbox"; 
     let agentIndex = this.dataset.agentIndex;
+    let agent = agents[agentIndex];
+    //console.log(this.dataset.heroIndex);
+    content.innerHTML = "";
+
+    let agentName = document.createElement("h3");
     let agent = agents[agentIndex]; 
     content.innerHTML = "";
 
@@ -95,12 +100,18 @@ export function lightbox() {
     agentRealName.textContent = agent.realname; 
     agentRealName.classList.add("lb_real");
 
+    let agentRealName = document.createElement("h4");
+    agentRealName.textContent = agent.realname;
+    agentRealName.classList.add("lb_real");
+
     let agentBio = document.createElement("p");
+    agentBio.textContent = agent.bio;
     agentBio.textContent = agent.bio; 
-    agentBio.classList.add("lb_text");
 
     content.appendChild(agentName);
+    content.appendChild(agentRealName);
     content.appendChild(agentBio);
+
 
     if (agent.name === "Neon" && agent.avatar) { 
       lightBox.style.backgroundImage = `url('images/${agent.avatar}')`; 
@@ -114,18 +125,3 @@ export function lightbox() {
     }
   }
 
- 
-  cards.forEach((card, index) => {
-    card.dataset.agentIndex = index;
-    card.addEventListener("click", fillContent);
-  });
-
-  
-  const closeBtn = document.querySelector(".lightbox_close");
-  if (closeBtn) {
-    closeBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      location.hash = "";
-    });
-  }
-}

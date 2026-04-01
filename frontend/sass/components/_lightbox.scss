@@ -2,54 +2,59 @@
 
 /* lightbox rules here */
 
-.lightbox { 
-    width: 100vw; /* vw = viewport width => screen width */
-    height: 100vh; /* vh = viewport height => screen height */
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    background-color: rgba(0, 0, 0, 0.85);
-    background-image: url('../frontend/images/Reyna_artwork.webp');
-    background-repeat: no-repeat;
-
-    background-size: 55vh; /* 55% of the viewport height */
-    background-position: 40px bottom;
-
-    z-index: 5000;
-
-    display: none;
+.lightbox {
+  width: 100vw; /* vw = viewport width => screen width */
+  height: 120vh; /* vh = viewport height => screen height */
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  background-image: url("../../images/Reyna_artwork.webp");
+  background-repeat: no-repeat;
+  background-size: 55vh; /* 55% of the viewport height */
+  background-position: 40px bottom;
+  z-index: 5000;
+  display: none;
 }
 
 .lightbox_close {
-    position: relative;
-    top: 20px;
-    left: 95%;
-
-    color: white;
-    font-size: 3em;
-
-    text-decoration: none;
-
-    font-weight: bolder;
+  position: relative;
+  top: 20px;
+  left: 85%;
+  color: white;
+  font-size: 3em;
+  text-decoration: none;
+  font-weight: bolder;
 }
 
-.lightbox_close:hover { opacity: 0.5; color: red; }
+.lightbox_close:hover {
+  opacity: 0.5;
+  color: $primary-color;
+}
 
 .lightbox article {
-    width: 55%;
-    margin-left: 40%;
-    padding-top: 50px;
+  width: 55%;
+  margin-left: 40%;
+  padding-top: 50px;
 }
 
-.lb_text, .lb_heading { text-align: left; }
+.lb_text,
+.lb_heading {
+  text-align: left;
+}
+
+.lb_heading {
+    font-size: 30px;
+    margin-left: 4rem;
+}
 
 .lb_text {
-    line-height: 1.6 !important;
-    margin-left: 0;
-    padding-top: 2em;
+  line-height: 1.6 !important;
+  margin-left: 0;
+  padding-top: 2em;
 }
 
 /* turn the lightbox on using the :target pseudo selector */
-.lightbox:target { display: block; }
+.lightbox:target {
+  display: block;
+}

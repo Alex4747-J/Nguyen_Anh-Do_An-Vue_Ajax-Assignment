@@ -56,3 +56,115 @@
   color: $bg-color;
   cursor: pointer;
 }
+
+#lightbox_content {
+  position: absolute;
+  width: 400px;
+  height: 680px;
+  background: #ffffff;
+  border-radius: 3px;
+  left: 58%;
+  top: 30%;
+  margin-left: -250px;
+  margin-top: -200px;
+  text-align: center;
+  h2 {
+    font-size: 32px;
+    margin-top: 2rem;
+  }
+  img {
+    position: fixed;
+    height: 400px;
+    width: auto;
+    right: 30%;
+    margin-top: -130px;
+  }
+  p {
+    font-family: $primary-font;
+    font-size: 12px;
+    padding-left: 11.5rem;
+    padding-right: 1rem;
+  }
+}
+
+#skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 8px;
+  margin-top: -40px;
+
+  h2 {
+    grid-column: 1 / -1;
+    margin-bottom: -10px;
+  }
+}
+
+.box {
+  padding: 8px 10px;
+  background: $primary-color;
+  color: white;
+  border: 1px solid $secondary-color;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px $secondary-color;
+  font-size: 11px;
+  line-height: 1.4;
+  text-align: left;
+  margin-top: 10px;
+  p {
+    color: $third-color;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0;
+    font-size: 9px !important;
+  }
+}
+
+#close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: $primary-color;
+  height: 20px;
+  width: 20px;
+  border-radius: 15px;
+  text-align: center;
+  color: $bg-color;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  #lightbox_content {
+    width: 900px;
+    height: 700px;
+    margin-left: -550px;
+    h2 {
+      font-size: 68px;
+      margin-top: -20px;
+      margin-bottom: -8px;
+      margin-left: 120px;
+    }
+    img {
+      height: 720px;
+      width: auto;
+      right: 50%;
+      margin-top: -90px;
+    }
+    p {
+      font-size: 19px;
+      padding-left: 11.5rem;
+    }
+  }
+
+  #skills {
+    width: 600px;
+    margin-left: 14rem;
+    h2 {
+      margin-top: 2rem;
+    }
+
+    p {
+      font-size: 14px !important;
+    }
+  }
+}

@@ -1,17 +1,8 @@
 export function lightbox() {
   console.log("JS file connected");
 
-  // PROVING YOUR UNDERSTANDING:
-
-  // complete the content array for all of the heroes.
-
-  // For EACH hero, have the hero name and bio be displayed in the lightbox when the hero's name is clicked.
-
-  // CHALLENGE:
-  // The same background image appears in the lightbox for all heroes. For Thor ONLY, there is a background image that should be displayed in the lightbox as well when Thor is clicked. No background image needs to appear for the other heroes, as there are no large images for them.(Consider how you need to represent the image value in the content array and in the page.)
-
   const lightBox = document.querySelector("#lightbox");
-  const links = document.querySelectorAll("#character_nav ul li a");
+  const links = document.querySelectorAll("#lightbox");
   const content = document.querySelector("#lightbox article");
 
   let agents = [
@@ -92,31 +83,39 @@ export function lightbox() {
   function fillContent(event) {
     // event.preventDefault();
     let agentIndex = this.dataset.agentIndex;
-    let agents = agents[agentIndex];
+    let agent = agents[agentIndex];
     //console.log(this.dataset.heroIndex);
     content.innerHTML = "";
 
     let agentName = document.createElement("h3");
-    agentName.textContent = agents.name;
+    agentName.textContent = agent.name;
     agentName.classList.add("lb_heading");
 
+    let agentRealName = document.createElement("h4");
+    agentRealName.textContent = agent.realname;
+    agentRealName.classList.add("lb_real");
+
     let agentBio = document.createElement("p");
-    agentBio.textContent = agents.bio;
+    agentBio.textContent = agent.bio;
     agentBio.classList.add("lb_text");
 
     content.appendChild(agentName);
+    content.appendChild(agentRealName);
     content.appendChild(agentBio);
 
-    if (agents.name === "Thor" && agents.avatar) {
-      lightBox.style.backgroundImage = `url('images/${agents.avatar}')`;
+
+    if (agent.name === "Neon" && agent.avatar) {
+      lightBox.style.backgroundImage = `url('frontend/images/${agent.avatar}')`;
       lightBox.style.backgroundSize = "55vh";
       lightBox.style.backgroundPosition = "40px bottom";
     } else {
-      lightBox.style.backgroundImage = "url('frontend/images/Reyna_artwork.webp')";
+      lightBox.style.backgroundImage =
+        "url('frontend/images/Reyna_artwork.webp')";
       lightBox.style.backgroundSize = "55vh";
       lightBox.style.backgroundPosition = "40px bottom";
     }
   }
-
+  
   links.forEach((link) => link.addEventListener("click", fillContent));
 }
+

@@ -1,3 +1,3 @@
-import { scrollBehavior }            from './modules/scroll.js';
+import { lightbox } from "./modules/lightbox";
 
-scrollBehavior();
+lightbox();

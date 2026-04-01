@@ -11,7 +11,11 @@ export function lightbox() {
   // The same background image appears in the lightbox for all heroes. For Thor ONLY, there is a background image that should be displayed in the lightbox as well when Thor is clicked. No background image needs to appear for the other heroes, as there are no large images for them.(Consider how you need to represent the image value in the content array and in the page.)
 
   const lightBox = document.querySelector("#lightbox");
+<<<<<<< Updated upstream
   const links = document.querySelectorAll("#character_nav ul li a");
+=======
+  const links = document.querySelectorAll("a[href='#lightbox']");
+>>>>>>> Stashed changes
   const content = document.querySelector("#lightbox article");
 
   let agents = [
@@ -92,23 +96,45 @@ export function lightbox() {
   function fillContent(event) {
     // event.preventDefault();
     let agentIndex = this.dataset.agentIndex;
+<<<<<<< Updated upstream
     let agents = agents[agentIndex];
+=======
+    let agent = agents[agentIndex];
+>>>>>>> Stashed changes
     //console.log(this.dataset.heroIndex);
     content.innerHTML = "";
 
     let agentName = document.createElement("h3");
+<<<<<<< Updated upstream
     agentName.textContent = agents.name;
     agentName.classList.add("lb_heading");
 
     let agentBio = document.createElement("p");
     agentBio.textContent = agents.bio;
+=======
+    agentName.textContent = agent.name;
+    agentName.classList.add("lb_heading");
+
+    let agentRealName = document.createElement("h4");
+    agentRealName.textContent = agent.realname;
+    agentRealName.classList.add("lb_real");
+
+    let agentBio = document.createElement("p");
+    agentBio.textContent = agent.bio;
+>>>>>>> Stashed changes
     agentBio.classList.add("lb_text");
 
     content.appendChild(agentName);
+    content.appendChild(agentRealName);
     content.appendChild(agentBio);
 
+<<<<<<< Updated upstream
     if (agents.name === "Thor" && agents.avatar) {
       lightBox.style.backgroundImage = `url('images/${agents.avatar}')`;
+=======
+    if (agent.name === "Neon" && agent.avatar) {
+      lightBox.style.backgroundImage = `url('frontend/images/${agent.avatar}')`;
+>>>>>>> Stashed changes
       lightBox.style.backgroundSize = "55vh";
       lightBox.style.backgroundPosition = "40px bottom";
     } else {

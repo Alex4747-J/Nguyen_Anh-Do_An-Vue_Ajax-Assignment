@@ -2,7 +2,7 @@ export function lightbox() {
   console.log("JS file connected");
 
   const lightBox = document.querySelector("#lightbox");
-  const links = document.querySelectorAll("a[href='#lightbox']");
+  const links = document.querySelectorAll("#lightbox");
   const content = document.querySelector("#lightbox article");
 
   let agents = [
@@ -82,23 +82,14 @@ export function lightbox() {
 
   function fillContent(event) {
     // event.preventDefault();
-    location.hash = "lightbox"; 
     let agentIndex = this.dataset.agentIndex;
     let agent = agents[agentIndex];
     //console.log(this.dataset.heroIndex);
     content.innerHTML = "";
 
     let agentName = document.createElement("h3");
-    let agent = agents[agentIndex]; 
-    content.innerHTML = "";
-
-    let agentName = document.createElement("h3");
-    agentName.textContent = agent.name; 
+    agentName.textContent = agent.name;
     agentName.classList.add("lb_heading");
-
-    let agentRealName = document.createElement("h4");
-    agentRealName.textContent = agent.realname; 
-    agentRealName.classList.add("lb_real");
 
     let agentRealName = document.createElement("h4");
     agentRealName.textContent = agent.realname;
@@ -106,15 +97,14 @@ export function lightbox() {
 
     let agentBio = document.createElement("p");
     agentBio.textContent = agent.bio;
-    agentBio.textContent = agent.bio; 
+    agentBio.classList.add("lb_text");
 
     content.appendChild(agentName);
     content.appendChild(agentRealName);
     content.appendChild(agentBio);
 
-
-    if (agent.name === "Neon" && agent.avatar) { 
-      lightBox.style.backgroundImage = `url('images/${agent.avatar}')`; 
+    if (agent.name === "Neon" && agent.avatar) {
+      lightBox.style.backgroundImage = `url('images/${agent.avatar}')`;
       lightBox.style.backgroundSize = "55vh";
       lightBox.style.backgroundPosition = "40px bottom";
     } else {
@@ -124,4 +114,6 @@ export function lightbox() {
       lightBox.style.backgroundPosition = "40px bottom";
     }
   }
+}
 
+links.forEach((link) => link.addEventListener("click", fillContent));

@@ -83,7 +83,6 @@ export function lightbox() {
   function fillContent(event) {
     // event.preventDefault();
     let agentIndex = this.dataset.agentIndex;
-    let agentIndex = event.currentTarget.dataset.agentIndex;
     let agent = agents[agentIndex];
     //console.log(this.dataset.heroIndex);
     content.innerHTML = "";

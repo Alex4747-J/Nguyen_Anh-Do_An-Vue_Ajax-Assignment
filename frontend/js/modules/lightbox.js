@@ -83,6 +83,7 @@ export function lightbox() {
   function fillContent(event) {
     // event.preventDefault();
     let agentIndex = this.dataset.agentIndex;
+    let agentIndex = event.currentTarget.dataset.agentIndex;
     let agent = agents[agentIndex];
     //console.log(this.dataset.heroIndex);
     content.innerHTML = "";
@@ -103,8 +104,9 @@ export function lightbox() {
     content.appendChild(agentRealName);
     content.appendChild(agentBio);
 
+
     if (agent.name === "Neon" && agent.avatar) {
-      lightBox.style.backgroundImage = `url('images/${agent.avatar}')`;
+      lightBox.style.backgroundImage = `url('frontend/images/${agent.avatar}')`;
       lightBox.style.backgroundSize = "55vh";
       lightBox.style.backgroundPosition = "40px bottom";
     } else {
@@ -114,6 +116,7 @@ export function lightbox() {
       lightBox.style.backgroundPosition = "40px bottom";
     }
   }
+  
+  links.forEach((link) => link.addEventListener("click", fillContent));
 }
 
-links.forEach((link) => link.addEventListener("click", fillContent));

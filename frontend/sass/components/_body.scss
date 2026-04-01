@@ -1,0 +1,144 @@
+@use "../abstracts" as *;
+
+h2 {
+  font-size: 52px;
+  margin-left: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 36px;
+  color: $third-color;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.card-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-left: 1rem;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  background-color: black;
+  width: 180px;
+  height: 260px;
+  padding: 3px;
+  border-radius: 10px;
+  overflow: visible;
+  margin-top: 1rem;
+}
+
+.card::after,
+.card::before {
+  position: absolute;
+  width: 104%;
+  height: 102%;
+  content: "";
+  background-image: linear-gradient($purple, $danger);
+  border-radius: 6px;
+  z-index: -1;
+  left: -2%;
+  top: -1%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.card::after {
+  filter: blur(20px);
+}
+
+.card:hover::after,
+.card:hover::before {
+  opacity: 1;
+  animation: spin 1.5s linear infinite;
+}
+
+.card img:nth-child(1) {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  width: 96%;
+  height: 96%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 6px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card:hover img:nth-child(1) {
+  opacity: 0;
+}
+
+.card img:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 360px;
+  max-width: unset;
+  opacity: 0;
+  object-position: bottom;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card:hover img:nth-child(2) {
+  opacity: 1;
+}
+
+.content {
+  position: absolute;
+  top: 80%;
+  left: 10px;
+  font-family: $secondary-font;
+  font-size: 33px;
+  color: $third-color;
+  rotate: -10deg;
+  text-shadow: 0 0 10px $bg-color;
+}
+
+.card:hover .content {
+  color: $bg-color;
+  text-shadow: 0 0 10px $primary-color;
+}
+
+.card1:hover {
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 100px;
+    margin-left: 20rem;
+  }
+
+  h3 {
+    font-size: 62px;
+    margin-left: 38rem;
+  }
+  .card-group {
+    gap: 8rem;
+    margin-top: 6rem;
+  }
+  .card {
+    width: 380px;
+    height: 460px;
+  }
+
+  .card img:nth-child(2) {
+    height: 620px;
+  }
+
+  .content {
+    font-size: 72px;
+  }
+}

@@ -2,7 +2,7 @@ export function lightbox() {
   console.log("JS file connected");
 
   const lightBox = document.querySelector("#lightbox");
-  const links = document.querySelectorAll("#lightbox");
+  const links = document.querySelectorAll("a[data-agent-index]");
   const content = document.querySelector("#lightbox article");
 
   let agents = [
@@ -119,4 +119,3 @@ export function lightbox() {
   
   links.forEach((link) => link.addEventListener("click", fillContent));
 }
-

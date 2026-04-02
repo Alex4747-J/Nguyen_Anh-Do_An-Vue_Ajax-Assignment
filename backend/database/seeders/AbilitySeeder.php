@@ -26,22 +26,22 @@ class AbilitySeeder extends Seeder
     {
      $abilities = [
             'Jett' => [
-                ['name' => 'Cloudburst',   'type' => 'basic',     'key_bind' => 'C', 'description' => 'Throw a cloud of fog that obscures vision on impact.'],
-                ['name' => 'Updraft',      'type' => 'basic',     'key_bind' => 'Q', 'description' => 'Launch upward after a brief pause.'],
-                ['name' => 'Tailwind',     'type' => 'signature', 'key_bind' => 'E', 'description' => 'Dash a short distance in the direction you are moving.'],
-                ['name' => 'Blade Storm',  'type' => 'ultimate',  'key_bind' => 'X', 'description' => 'Arm yourself with deadly throwing knives that deal moderate damage and kill on headshots.'],
+                ['name' => 'Cloudburst', 'type' => 'basic', 'key_bind' => 'C', 'description' => 'Throw a cloud of fog that obscures vision on impact.'],
+                ['name' => 'Updraft', 'type' => 'basic', 'key_bind' => 'Q', 'description' => 'Launch upward after a brief pause.'],
+                ['name' => 'Tailwind', 'type' => 'signature', 'key_bind' => 'E', 'description' => 'Dash a short distance in the direction you are moving.'],
+                ['name' => 'Blade Storm', 'type' => 'ultimate', 'key_bind' => 'X', 'description' => 'Arm yourself with deadly throwing knives that deal moderate damage and kill on headshots.'],
             ],
             'Sage' => [
-                ['name' => 'Barrier Orb',      'type' => 'basic',     'key_bind' => 'C', 'description' => 'Place a solid wall that can be rotated before casting.'],
-                ['name' => 'Slow Orb',          'type' => 'basic',     'key_bind' => 'Q', 'description' => 'Cast an orb that creates a slowing field on the ground.'],
-                ['name' => 'Healing Orb',       'type' => 'signature', 'key_bind' => 'E', 'description' => 'Heal an ally or yourself over a few seconds.'],
-                ['name' => 'Resurrection',      'type' => 'ultimate',  'key_bind' => 'X', 'description' => 'Target a dead ally to revive them with full health.'],
+                ['name' => 'Barrier Orb', 'type' => 'basic', 'key_bind' => 'C', 'description' => 'Place a solid wall that can be rotated before casting.'],
+                ['name' => 'Slow Orb', 'type' => 'basic', 'key_bind' => 'Q', 'description' => 'Cast an orb that creates a slowing field on the ground.'],
+                ['name' => 'Healing Orb', 'type' => 'signature', 'key_bind' => 'E', 'description' => 'Heal an ally or yourself over a few seconds.'],
+                ['name' => 'Resurrection', 'type' => 'ultimate', 'key_bind' => 'X', 'description' => 'Target a dead ally to revive them with full health.'],
             ],
             'Sova' => [
-                ['name' => 'Owl Drone',         'type' => 'basic',     'key_bind' => 'C', 'description' => 'Deploy a drone that can fire a dart to reveal enemies.'],
-                ['name' => 'Shock Bolt',         'type' => 'basic',     'key_bind' => 'Q', 'description' => 'Fire an explosive bolt that damages enemies on impact.'],
-                ['name' => 'Recon Bolt',         'type' => 'signature', 'key_bind' => 'E', 'description' => 'Fire a bolt that reveals nearby enemies in its line of sight.'],
-                ['name' => 'Hunters Fury',       'type' => 'ultimate',  'key_bind' => 'X', 'description' => 'Fire up to three energy blasts that pierce walls and damage enemies.'],
+                ['name' => 'Owl Drone', 'type' => 'basic', 'key_bind' => 'C', 'description' => 'Deploy a drone that can fire a dart to reveal enemies.'],
+                ['name' => 'Shock Bolt', 'type' => 'basic', 'key_bind' => 'Q', 'description' => 'Fire an explosive bolt that damages enemies on impact.'],
+                ['name' => 'Recon Bolt', 'type' => 'signature', 'key_bind' => 'E', 'description' => 'Fire a bolt that reveals nearby enemies in its line of sight.'],
+                ['name' => 'Hunters Fury', 'type' => 'ultimate', 'key_bind' => 'X', 'description' => 'Fire up to three energy blasts that pierce walls and damage enemies.'],
             ],
             'Omen' => [
                 ['name' => 'Shrouded Step', 'type' => 'basic', 'key_bind' => 'C', 'description' => 'Teleport a short distance after a brief delay.'],

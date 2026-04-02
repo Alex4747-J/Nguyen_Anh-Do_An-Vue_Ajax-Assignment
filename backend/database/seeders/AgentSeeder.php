@@ -98,9 +98,7 @@ class AgentSeeder extends Seeder
             ],
         ];
 
-        //Loop through each agent and create it in the database
-        foreach ($agents as $agent) {
-            Agent::create($agent);
-        }
+        Agent::factory()->createMany($agents);
+
     }
 }

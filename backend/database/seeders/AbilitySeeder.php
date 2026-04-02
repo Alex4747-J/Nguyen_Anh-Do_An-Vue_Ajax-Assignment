@@ -106,8 +106,7 @@ class AbilitySeeder extends Seeder
 
             // Create each ability linked to this agent
             foreach ($agentAbilities as $ability) {
-                $ability['agent_id'] = $agent->id;
-                Ability::create($ability);
+                Ability::factory()->create($ability, $agent);
             }
         }
     }

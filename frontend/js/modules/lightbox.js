@@ -5,10 +5,11 @@ export function lightbox() {
   triggers.forEach(function (trigger) {
     trigger.addEventListener("click", function (e) {
       e.preventDefault(); 
-      document.getElementById("lightbox").className = "open";
+      document.querySelector(".lightbox").className = "open";
     });
   });
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   function fillContent(event) {
     // event.preventDefault();
@@ -20,12 +21,16 @@ export function lightbox() {
 =======
   document.getElementById("close").addEventListener("click", function () {
     document.getElementById("lightbox").className = "";
+=======
+  document.querySelector("#close").addEventListener("click", function () {
+    document.querySelector("#lightbox").className = "";
+>>>>>>> Stashed changes
   });
 >>>>>>> Stashed changes
 
-  document.getElementById("lightbox").addEventListener("click", function (e) {
+  document.querySelector("#lightbox").addEventListener("click", function (e) {
     if (e.target.id == "lightbox") {
-      document.getElementById("lightbox").className = "";
+      document.querySelector(".lightbox").className = "";
     }
   });
 }

@@ -121,6 +121,16 @@ h3 {
   background-color: transparent;
 }
 
+.error-msg {
+  display: flex; 
+  align-items: center; 
+  justify-content:center; 
+  height: 100%;
+  p{
+    color: #ff4654; 
+  font-size: 18px;}
+}
+
 @media screen and (min-width: 768px) {
   h2 {
     font-size: 60px;

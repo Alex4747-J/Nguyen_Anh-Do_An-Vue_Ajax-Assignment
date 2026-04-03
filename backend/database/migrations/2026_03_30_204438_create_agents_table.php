@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->string('role');
             $table->text('biography')->nullable();
+            $table->string('icon_url')->nullable();
             $table->string('image_url')->nullable();
             $table->timestamps();
         });

@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 h2 {
-  font-size: 52px;
+  font-size: 44px;
   margin-left: 0.5rem;
   margin-bottom: 2rem;
 }
@@ -11,7 +11,7 @@ h3 {
   color: $third-color;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  margin-left: 2rem;
+  margin-left: 8rem;
 }
 
 #agents-nav {
@@ -25,7 +25,7 @@ h3 {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 3rem;
-  margin-right: 2rem;
+  margin-left: 1.5rem;
   margin-top: 5rem;
   margin-bottom: 4rem;
   justify-content: center;
@@ -123,13 +123,14 @@ h3 {
 
 @media screen and (min-width: 768px) {
   h2 {
-    font-size: 100px;
-    margin-left: 20rem;
+    font-size: 60px;
+    margin-left: 8rem;
+    margin-top: 2rem;
   }
 
   h3 {
-    font-size: 62px;
-    margin-left: 38rem;
+    font-size: 52px;
+    margin-left: 16rem;
   }
   .card-group {
     gap: 8rem;
@@ -146,5 +147,16 @@ h3 {
 
   .content {
     font-size: 72px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 78px;
+    margin-left: 16rem;
+  }
+  h3 {
+    font-size: 60px;
+    margin-left: 29rem;
   }
 }

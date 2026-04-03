@@ -135,23 +135,61 @@
 
 @media screen and (min-width: 768px) {
   #lightbox_content {
-    width: 900px;
-    height: 700px;
-    margin-left: -550px;
+    width: 600px;
+    height: 600px;
+    margin-left: -350px;
+    margin-top: -170px;
     h2 {
-      font-size: 68px;
-      margin-top: -20px;
+      font-size: 33px;
+      margin-top: 10px;
       margin-bottom: -8px;
       margin-left: 120px;
     }
     img {
-      height: 720px;
+      height: 520px;
       width: auto;
-      right: 50%;
-      margin-top: -90px;
+      right: 40%;
+      margin-top: -20px;
     }
     p {
-      font-size: 19px;
+      font-size: 13px;
+      padding-left: 11.5rem;
+    }
+  }
+
+  #skills {
+    width: 400px;
+    margin-left: 12rem;
+    h2 {
+      margin-top: 2rem;
+      margin-right: 10rem;
+    }
+
+    p {
+      font-size: 11px !important;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #lightbox_content {
+    width: 900px;
+    height: 600px;
+    margin-left: -550px;
+    h2 {
+      font-size: 46px;
+      margin-top: 10px;
+      margin-bottom: -8px;
+      margin-left: 120px;
+    }
+    img {
+      height: 620px;
+      width: auto;
+      right: 53%;
+      margin-top: -80px;
+    }
+    p {
+      font-size: 16px;
       padding-left: 11.5rem;
     }
   }
@@ -161,6 +199,7 @@
     margin-left: 14rem;
     h2 {
       margin-top: 2rem;
+          font-size: 46px;
     }
 
     p {

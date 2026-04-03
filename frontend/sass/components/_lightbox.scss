@@ -5,43 +5,13 @@
   width: 100%;
   height: 100%;
   top: 0px;
-  left: 0px;
+  left: 20px;
   background: rgba(0, 0, 0, 0.3);
   display: none;
 }
 
 #lightbox.open {
   display: block;
-}
-
-#lightbox_content {
-  position: absolute;
-  width: 400px;
-  height: 600px;
-  background: #ffffff;
-  border-radius: 3px;
-  left: 58%;
-  top: 30%;
-  margin-left: -250px;
-  margin-top: -200px;
-  text-align: center;
-  h2 {
-    font-size: 32px;
-    margin-top: 2rem;
-  }
-  img {
-    position: fixed;
-    height: 400px;
-    width: auto;
-    right: 30%;
-    margin-top: -80px;
-  }
-  p {
-    font-family: $primary-font;
-    font-size: 12px;
-    padding-left: 11.5rem;
-    padding-right: 1rem;
-  }
 }
 
 #close {
@@ -60,7 +30,7 @@
 #lightbox_content {
   position: absolute;
   width: 400px;
-  height: 680px;
+  height: 450px;
   background: #ffffff;
   border-radius: 3px;
   left: 58%;
@@ -74,15 +44,15 @@
   }
   img {
     position: fixed;
-    height: 400px;
+    height: 275px;
     width: auto;
-    right: 30%;
+    right: 40%;
     margin-top: -130px;
   }
   p {
     font-family: $primary-font;
     font-size: 12px;
-    padding-left: 11.5rem;
+    padding-left: 10rem;
     padding-right: 1rem;
   }
 }
@@ -172,6 +142,7 @@
 }
 
 @media screen and (min-width: 1200px) {
+
   #lightbox_content {
     width: 900px;
     height: 600px;

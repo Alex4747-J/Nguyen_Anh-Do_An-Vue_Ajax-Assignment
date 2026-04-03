@@ -13,226 +13,144 @@
     <link rel="stylesheet" href="css/main.css" />
     <title>Valorant API</title>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/SplitText.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/TextPlugin.min.js"></script>
-    <script defer type="module" src="js/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
-    <header>
-      <section class="header">
-        <img src="images/valorant-2.svg" alt="valorant logo" />
-        <nav class="navbar">
-          <h1 class="hidden">Welcome to Valorant</h1>
-          <div class="nav-container">
-            <ul class="nav-link">
-              <li><a href="#duelist">Duelist</a></li>
-              <li><a href="#sentinel">Sentinel</a></li>
-              <li><a href="#initiator">Initiator</a></li>
-              <li><a href="#controller">Controller</a></li>
-            </ul>
-          </div>
-        </nav>
-      </section>
-    </header>
-
-    <main>
-      <h2>Select your Agents</h2>
-
-      <section id="duelist" class="duel-agents">
-        <h3 class="typewriter">DUELIST</h3>
-        <div class="card-group">
-          <div class="card card1">
-            <a href="#clickme">
-              <img src="images/reyna_id_duel.jpg" />
-              <img src="images/Reyna_artwork.webp" />
-              <div class="content">
-                <div class="name">Reyna</div>
-              </div>
-            </a>
-          </div>
-          <div class="card card1">
-            <a href="#clickme">
-              <img src="images/neon_id_duel.jpg" />
-              <img src="images/Neon_artwork.webp" />
-              <div class="content">
-                <div class="name">Neon</div>
-              </div>
-            </a>
-          </div>
-          <div class="card card1">
-            <a href="#clickme">
-              <img src="images/iso_id_duel.jpg" />
-              <img src="images/Iso_artwork.webp" />
-              <div class="content">
-                <div class="name">Iso</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="sentinel" class="sen-agents">
-        <h3 class="typewriter">SENTINEL</h3>
-        <div class="card-group">
-          <div class="card card1">
-            <a href="#clickme">
-              <img src="images/chamber_id_sen.jpg" />
-              <img src="images/Chamber_artwork.webp" />
-              <div class="content">
-                <div class="name">Chamber</div>
-              </div>
-            </a>
-          </div>
-          <div class="card card1">
-            <a href="#clickme">
-              <img src="images/killjoy_id_sen.jpg" />
-              <img src="images/Killjoy_artwork.webp" />
-              <div class="content">
-                <div class="name">Killjoy</div>
-              </div>
-            </a>
-          </div>
-          <div class="card card1">
-            <a href="#clickme">
-              <img src="images/sage_id_sen.jpg" />
-              <img src="images/Sage_artwork.webp" />
-              <div class="content">
-                <div class="name">Sage</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="initiator" class="int-agents">
-        <h3 class="typewriter">INITIATOR</h3>
-        <div class="card-group">
-          <div class="card card1">
-            <a href="#clickme">
-              <img src="images/fade_id_int.jpg" />
-              <img src="images/Fade_artwork.webp" />
-              <div class="content">
-                <div class="name">Fade</div>
-              </div>
-            </a>
-          </div>
-          <div class="card card1">
-            <a href="#clickme">
-              <img src="images/gekko_id_int.jpg" />
-              <img src="images/Gekko_artwork.webp" />
-              <div class="content">
-                <div class="name">Gekko</div>
-              </div>
-            </a>
-          </div>
-          <div class="card card1">
-            <a href="#clickme">
-              <img src="images/skye_id_Int.jpg" />
-              <img src="images/Skye_artwork.webp" />
-              <div class="content">
-                <div class="name">Skye</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="controller" class="con-agents">
-        <h3 class="typewriter">CONTROLLER</h3>
-        <div class="card-group">
-          <div class="card card1">
-            <a href="#clickme">
-              <img src="images/viper_id_con.jpg" />
-              <img src="images/Viper_artwork.webp" />
-              <div class="content">
-                <div class="name">Viper</div>
-              </div>
-            </a>
-          </div>
-          <div class="card card1">
-            <a href="#clickme">
-              <img src="images/omen_id_con.jpg" />
-              <img src="images/Omen_artwork.webp" />
-              <div class="content">
-                <div class="name">Omen</div>
-              </div>
-            </a>
-          </div>
-          <div class="card card1">
-            <a href="#clickme">
-              <img src="images/clove_id_con.jpg" />
-              <img src="images/Clove_artwork.webp" />
-              <div class="content">
-                <div class="name">Clove</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="foot-cont">
-        <p>Valorant Gives You High Cortisol</p>
-        <p>Made by 4 Vien Dan Dong#4444 and PoisonCroissant#amour</p>
-      </div>
-    </footer>
-
-    <!-- lightbox goes here -->
-    <section class="lightbox" id="lightbox">
-      <div id="lightbox_content">
-        <div id="close">&times;</div>
-        <div class="bio">
-          <h2>Reyna</h2>
-          <img src="images/Reyna_artwork.webp" alt="Reyna" />
-          <p>
-            Zyanya Mondragón is a Radiant from Mexico with the power to absorb
-            life energy from the souls of people that she kills. After being
-            affected by a disastrous event involving machines, Mondragón has a
-            strong dislike for technology and humanity, believing herself and
-            her fellow radiants to be the true future for Alpha Earth. Before
-            her time as a VALORANT Protocol agent, she set up the Sanctuary to
-            help people escape from Kingdom and heal, establishing a community
-            there and becoming their protector and avenger.
-          </p>
-
-          <div id="skills">
-            <h2>Abilities</h2>
-            <div class="box">
-              <p>
-                <strong>LEER - KEYBIND C</strong>:Equip an ethereal,
-                destructible eye. Activating it throws the eye a short distance,
-                nearsighting enemies who look at it. It can be thrown through
-                walls and is often used to set up pushes.
-              </p>
+    <div id="app">
+      <header>
+        <section class="header">
+          <img src="images/valorant-2.svg" alt="valorant logo" />
+          <nav class="navbar">
+            <h1 class="hidden">Welcome to Valorant</h1>
+            <div class="nav-container">
+              <ul class="nav-link">
+                <li><a href="#duelist">Duelist</a></li>
+                <li><a href="#sentinel">Sentinel</a></li>
+                <li><a href="#initiator">Initiator</a></li>
+                <li><a href="#controller">Controller</a></li>
+              </ul>
             </div>
-            <div class="box">
-              <p>
-                <strong>DEVOUR - KEYBIND Q</strong>: Instantly consume a nearby
-                Soul Orb, rapidly regenerating health over a short duration.
-                Health gained exceeding 100 becomes a temporary shield, but
-                decays over time.
-              </p>
+          </nav>
+        </section>
+      </header>
+
+      <main>
+        <h2>Select your Agents</h2>
+
+        <!-- Loading State -->
+        <div v-if="loadingAgents">
+
+          <svg fill="hsl(228, 97%, 42%)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="3" r="1"><animate id="spinner_7Z73" begin="0;spinner_tKsu.end-0.5s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="16.50" cy="4.21" r="1"><animate id="spinner_Wd87" begin="spinner_7Z73.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="7.50" cy="4.21" r="1"><animate id="spinner_tKsu" begin="spinner_9Qlc.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="19.79" cy="7.50" r="1"><animate id="spinner_lMMO" begin="spinner_Wd87.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="4.21" cy="7.50" r="1"><animate id="spinner_9Qlc" begin="spinner_Khxv.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="21.00" cy="12.00" r="1"><animate id="spinner_5L9t" begin="spinner_lMMO.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="3.00" cy="12.00" r="1"><animate id="spinner_Khxv" begin="spinner_ld6P.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="19.79" cy="16.50" r="1"><animate id="spinner_BfTD" begin="spinner_5L9t.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="4.21" cy="16.50" r="1"><animate id="spinner_ld6P" begin="spinner_XyBs.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="16.50" cy="19.79" r="1"><animate id="spinner_7gAK" begin="spinner_BfTD.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="7.50" cy="19.79" r="1"><animate id="spinner_XyBs" begin="spinner_HiSl.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="12" cy="21" r="1"><animate id="spinner_HiSl" begin="spinner_7gAK.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><animateTransform attributeName="transform" type="rotate" dur="6s" values="360 12 12;0 12 12" repeatCount="indefinite"/></g></svg>
+        </div>
+
+        <!-- Error State -->
+        <div v-else-if="error && !lightboxOpen" style="text-align: center; padding: 4rem;">
+          <p style="color: #ff4654; font-size: 18px;">{{ error }}</p>
+        </div>
+
+        <!-- Duelist Section -->
+        <section id="duelist" v-else>
+          <h3 class="typewriter">DUELIST</h3>
+          <div class="card-group">
+            <div class="card card1" v-for="agent in agentsByRole('Duelist')" :key="agent.id">
+              <a href="#" @click.prevent="getAgent(agent.id)">
+                <img :src="agent.icon_url" :alt="agent.name" />
+                <img :src="agent.image_url" :alt="agent.name" />
+                <div class="content">
+                  <div class="name">{{ agent.name }}</div>
+                </div>
+              </a>
             </div>
-            <div class="box">
-              <p>
-                <strong>DISMISS - KEYBIND E</strong>:Instantly consume a nearby
-                Soul Orb, becoming intangible (invulnerable) for a short
-                duration. While active, Reyna cannot be damaged but cannot
-                shoot.
-              </p>
+          </div>
+        </section>
+
+        <!-- Sentinel Section -->
+        <section id="sentinel" v-if="!loadingAgents && !error">
+          <h3 class="typewriter">SENTINEL</h3>
+          <div class="card-group">
+            <div class="card card1" v-for="agent in agentsByRole('Sentinel')" :key="agent.id">
+              <a href="#" @click.prevent="getAgent(agent.id)">
+                <img :src="agent.icon_url" :alt="agent.name" />
+                <img :src="agent.image_url" :alt="agent.name" />
+                <div class="content">
+                  <div class="name">{{ agent.name }}</div>
+                </div>
+              </a>
             </div>
-            <div class="box">
-              <p>
-                <strong>EMPRESS - KEYBIND X (ULTIMATE) </strong>:Enter a frenzy
-                that increases firing, equip, and reload speed dramatically.
-                Getting kills refreshes the duration, and using Devour/Dismiss
-                during this state is enhanced (automatic heal, invisibility).
-              </p>
+          </div>
+        </section>
+
+        <!-- Initiator Section -->
+        <section id="initiator" v-if="!loadingAgents && !error">
+          <h3 class="typewriter">INITIATOR</h3>
+          <div class="card-group">
+            <div class="card card1" v-for="agent in agentsByRole('Initiator')" :key="agent.id">
+              <a href="#" @click.prevent="getAgent(agent.id)">
+                <img :src="agent.icon_url" :alt="agent.name" />
+                <img :src="agent.image_url" :alt="agent.name" />
+                <div class="content">
+                  <div class="name">{{ agent.name }}</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Controller Section -->
+        <section id="controller" v-if="!loadingAgents && !error">
+          <h3 class="typewriter">CONTROLLER</h3>
+          <div class="card-group">
+            <div class="card card1" v-for="agent in agentsByRole('Controller')" :key="agent.id">
+              <a href="#" @click.prevent="getAgent(agent.id)">
+                <img :src="agent.icon_url" :alt="agent.name" />
+                <img :src="agent.image_url" :alt="agent.name" />
+                <div class="content">
+                  <div class="name">{{ agent.name }}</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="foot-cont">
+          <p>Valorant Gives You High Cortisol</p>
+          <p>Made by 4 Vien Dan Dong#4444 and PoisonCroissant#amour</p>
+        </div>
+      </footer>
+
+      <!-- Dynamic Lightbox -->
+      <section class="lightbox" id="lightbox" :class="{ open: lightboxOpen }" @click="closeLightboxOutside($event)">
+        <div id="lightbox_content" ref="lightboxContent">
+          <div id="close" @click="closeLightbox">&times;</div>
+
+          <div v-if="loadingAgentDetails" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+            <svg fill="hsl(228, 97%, 42%)" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><circle cx="12" cy="3" r="1"><animate id="spinner_7Z73" begin="0;spinner_tKsu.end-0.5s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="16.50" cy="4.21" r="1"><animate id="spinner_Wd87" begin="spinner_7Z73.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="7.50" cy="4.21" r="1"><animate id="spinner_tKsu" begin="spinner_9Qlc.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="19.79" cy="7.50" r="1"><animate id="spinner_lMMO" begin="spinner_Wd87.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="4.21" cy="7.50" r="1"><animate id="spinner_9Qlc" begin="spinner_Khxv.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="21.00" cy="12.00" r="1"><animate id="spinner_5L9t" begin="spinner_lMMO.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="3.00" cy="12.00" r="1"><animate id="spinner_Khxv" begin="spinner_ld6P.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="19.79" cy="16.50" r="1"><animate id="spinner_BfTD" begin="spinner_5L9t.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="4.21" cy="16.50" r="1"><animate id="spinner_ld6P" begin="spinner_XyBs.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="16.50" cy="19.79" r="1"><animate id="spinner_7gAK" begin="spinner_BfTD.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="7.50" cy="19.79" r="1"><animate id="spinner_XyBs" begin="spinner_HiSl.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><circle cx="12" cy="21" r="1"><animate id="spinner_HiSl" begin="spinner_7gAK.begin+0.1s" attributeName="r" calcMode="spline" dur="0.6s" values="1;2;1" keySplines=".27,.42,.37,.99;.53,0,.61,.73"/></circle><animateTransform attributeName="transform" type="rotate" dur="6s" values="360 12 12;0 12 12" repeatCount="indefinite"/></g></svg>
+          </div>
+
+          <div v-else-if="error && lightboxOpen" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+            <p style="color: #ff4654;">{{ error }}</p>
+          </div>
+
+          <div v-else-if="selectedAgent" class="bio">
+            <h2>{{ selectedAgent.name }}</h2>
+            <img :src="selectedAgent.image_url" :alt="selectedAgent.name" />
+            <p>{{ selectedAgent.biography }}</p>
+
+            <div id="skills">
+              <h2>Abilities</h2>
+              <div class="box" v-for="ability in selectedAgent.abilities" :key="ability.id">
+                <p>
+                  <strong>{{ ability.name }} - KEYBIND {{ ability.key_bind }}</strong>:
+                  {{ ability.description }}
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>

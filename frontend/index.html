@@ -43,8 +43,8 @@
         </div>
 
         <!-- Error State -->
-        <div v-else-if="error && !lightboxOpen" style="text-align: center; padding: 4rem;">
-          <p style="color: #ff4654; font-size: 18px;">{{ error }}</p>
+        <div v-else-if="error && !lightboxOpen" class="error-msg">
+          <p>{{ error }}</p>
         </div>
 
         <!-- Duelist Section -->
@@ -124,12 +124,12 @@
         <div id="lightbox_content" ref="lightboxContent">
           <div id="close" @click="closeLightbox">&times;</div>
 
-          <div v-if="loadingAgentDetails" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+          <div v-if="loadingAgentDetails">
               <img src="images/90-ring-with-gradient.svg" alt="Loading...">
             </div>
 
-            <div v-else-if="error && lightboxOpen" style="display: flex; align-items: center; justify-content: center; height: 100%;">
-            <p style="color: #ff4654;">{{ error }}</p>
+            <div v-else-if="error && lightboxOpen" class="error-msg">
+            <p>{{ error }}</p>
           </div>
 
           <div v-else-if="selectedAgent" class="bio">

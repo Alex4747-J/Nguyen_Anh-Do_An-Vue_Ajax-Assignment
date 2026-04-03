@@ -32,7 +32,7 @@ class AbilityFactory extends Factory
         $keyBinds = ['Q', 'E', 'C', 'X'];
 
         return [
-            'agent_id' => Agent::factory(),
+            'agent_id' => 1, // This will be overridden when creating abilities for specific agents
             'name' => fake()->unique()->words(2, true),
             'type' => fake()->randomElement($types),
             'description' => fake()->sentence(10),

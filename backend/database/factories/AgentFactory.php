@@ -28,6 +28,7 @@ class AgentFactory extends Factory
                 'name' => fake()->unique()->firstName(),
                 'role' => fake()->randomElement($roles),
                 'biography' => fake()->paragraph(3),
+                'icon_url' => fake()->imageUrl(200, 200, 'people'),
                 'image_url' => fake()->imageUrl(640, 400, 'people'),
         ];
     }

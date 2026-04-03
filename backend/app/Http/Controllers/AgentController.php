@@ -71,6 +71,7 @@ class AgentController extends Controller
             'name' => $request->input('name'),
             'role' => $request->input('role'),
             'biography' => $request->input('biography', null),
+            'icon_url' => $request->input('icon_url', null),
             'image_url' => $request->input('image_url', null),
         ]);
 
@@ -101,6 +102,10 @@ class AgentController extends Controller
             $agent->biography = $request->input('biography');
         }
 
+        if ($request->has('icon_url')) {
+            $agent->icon_url = $request->input('icon_url');
+        }
+        
         if ($request->has('image_url')) {
             $agent->image_url = $request->input('image_url');
         }

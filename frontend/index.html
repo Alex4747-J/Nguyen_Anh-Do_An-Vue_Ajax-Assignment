@@ -49,7 +49,7 @@
 
         <!-- Duelist Section -->
         <section id="duelist" v-else>
-          <h3 class="typewriter">DUELIST</h3>
+          <h3>DUELIST</h3>
           <div class="card-group">
             <div class="card card1" v-for="agent in agentsByRole('Duelist')" :key="agent.id">
               <a href="#" @click.prevent="getAgent(agent.id)">
@@ -65,7 +65,7 @@
 
         <!-- Sentinel Section -->
         <section id="sentinel" v-if="!loadingAgents && !error">
-          <h3 class="typewriter">SENTINEL</h3>
+          <h3 >SENTINEL</h3>
           <div class="card-group">
             <div class="card card1" v-for="agent in agentsByRole('Sentinel')" :key="agent.id">
               <a href="#" @click.prevent="getAgent(agent.id)">
@@ -81,7 +81,7 @@
 
         <!-- Initiator Section -->
         <section id="initiator" v-if="!loadingAgents && !error">
-          <h3 class="typewriter">INITIATOR</h3>
+          <h3>INITIATOR</h3>
           <div class="card-group">
             <div class="card card1" v-for="agent in agentsByRole('Initiator')" :key="agent.id">
               <a href="#" @click.prevent="getAgent(agent.id)">
@@ -97,7 +97,7 @@
 
         <!-- Controller Section -->
         <section id="controller" v-if="!loadingAgents && !error">
-          <h3 class="typewriter">CONTROLLER</h3>
+          <h3>CONTROLLER</h3>
           <div class="card-group">
             <div class="card card1" v-for="agent in agentsByRole('Controller')" :key="agent.id">
               <a href="#" @click.prevent="getAgent(agent.id)">

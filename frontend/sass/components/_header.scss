@@ -5,7 +5,7 @@
   img {
     height: 180px;
     width: auto;
-    margin-left: 8rem;
+    margin-left: 6rem;
     margin-top: 1rem;
   }
 }
@@ -14,11 +14,11 @@
   ul {
     list-style: none;
     display: flex;
-    gap: 30px;
-
+    gap: 12px;
+    margin-left: 1.5rem;
     li {
       color: $third-color;
-      font-size: 22px;
+      font-size: 18px;
       position: relative;
       padding: 8px 0.1px;
       cursor: pointer;
@@ -62,22 +62,43 @@
 
 @media screen and (min-width: 768px) {
   .header {
-    height: 280px;
+    height: 180px;
     @media screen and (min-width: 768px) {
       img {
-        height: 220px;
+        height: 130px;
+        margin-left: 1rem;
       }
     }
   }
 
   .nav-container {
     ul {
-        li {
-            font-size: 46px;
-            left: 30%;
-            top: -120px;
-            margin-left: 2rem;
-        }
+      li {
+        font-size: 28px;
+        left: 26%;
+        top: -100px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    height: 220px;
+    img {
+      height: 180px;
+      margin-left: 3rem;
+    }
+  }
+
+  .nav-container {
+    ul {
+      li {
+        font-size: 36px;
+        left: 26%;
+        top: -140px;
+        margin-left: 3rem;
+      }
     }
   }
 }

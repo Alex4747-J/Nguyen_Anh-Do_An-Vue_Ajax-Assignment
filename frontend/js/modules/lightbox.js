@@ -4,18 +4,18 @@ export function lightbox() {
 
   triggers.forEach(function (trigger) {
     trigger.addEventListener("click", function (e) {
-      e.preventDefault(); 
-      document.getElementById("lightbox").className = "open";
+      e.preventDefault();
+      document.querySelector(".lightbox").classList.add("open"); 
     });
   });
 
-  document.getElementById("close").addEventListener("click", function () {
-    document.getElementById("lightbox").className = "";
+  document.querySelector("#close").addEventListener("click", function () {
+    document.querySelector(".lightbox").classList.remove("open"); 
   });
 
-  document.getElementById("lightbox").addEventListener("click", function (e) {
+  document.querySelector("#lightbox").addEventListener("click", function (e) {
     if (e.target.id == "lightbox") {
-      document.getElementById("lightbox").className = "";
+      document.querySelector(".lightbox").classList.remove("open"); 
     }
   });
 }

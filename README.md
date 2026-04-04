@@ -52,6 +52,10 @@ DB_CONNECTION=mysql
    php artisan key:generate
 ```
 
+6. Create a database for seeding:
+
+Please head over to your phpMyAdmin, create a database and name it "valorant_db"
+
 6. Run migrations and seed the database:
 ```
    php artisan migrate
